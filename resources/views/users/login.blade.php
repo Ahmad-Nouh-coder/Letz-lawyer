@@ -35,7 +35,7 @@
             </div>
 
             <div class="mb-6">
-                <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+                <button style="background-color:#B8860B;" class="text-white rounded py-2 px-4 hover:bg-black">
                     Sign In
                 </button>
             </div>

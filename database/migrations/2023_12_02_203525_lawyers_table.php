@@ -11,15 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasTable('lawyers')) {
-            Schema::create('lawyers', function (Blueprint $table) {
-                $table->id();
-                $table->string('title');
-                $table->string('tags');
-                $table->string('company')->nullable();
-                $table->timestamps();
-            });
-        }
+        Schema::create('lawyers', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')
+                  ->constrained()
+                  ->onDelete('cascade');
+            $table->string('title');
+            $table->string('logo')->nullable();
+            $table->string('tags');
+            $table->string('location');
+            $table->string('company');
+            $table->string('email');
+            $table->string('website');
+            $table->longText('description');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('lawyers');
     }
 };
