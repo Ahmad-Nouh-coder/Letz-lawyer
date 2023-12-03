@@ -137,6 +137,7 @@
             "time": "2022-10-27T11:44:00+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "doctrine/cache",
             "version": "2.2.0",
             "source": {
@@ -481,6 +482,8 @@
             "time": "2022-10-12T20:59:15+00:00"
         },
         {
+=======
+>>>>>>> master
             "name": "doctrine/inflector",
             "version": "2.0.8",
             "source": {
@@ -2735,6 +2738,7 @@
             "time": "2023-11-12T21:59:55+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -2784,6 +2788,8 @@
             "time": "2021-02-03T23:26:27+00:00"
         },
         {
+=======
+>>>>>>> master
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
