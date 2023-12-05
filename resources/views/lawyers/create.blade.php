@@ -68,7 +68,7 @@
                 @error('specialty')
                     <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                 @enderror
-                
+
                 @php
                     // This uses the Laravel count function and this php script makes it so that if less than 12 specialties are selected, it will fill the remaining entries with 0 instead of NULL for the db because data integrity mate
                     // Get the number of selected specialties
@@ -121,7 +121,7 @@
                 <label for="phone" class="inline-block text-lg mb-2">Contact Phone Number</label>
                 <input type="text" value="{{ old('phone') }}" class="border border-gray-200 rounded p-2 w-full"
                     name="phone" placeholder="Example: +352 00 00 00" />
-                @error('email')
+                @error('phone')
                     <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                 @enderror
             </div>
