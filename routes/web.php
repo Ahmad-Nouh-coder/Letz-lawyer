@@ -2,8 +2,10 @@
 
 use App\Models\Lawyer;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LawyerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LawyerController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,4 +87,9 @@ Route::get('/external-link', function(){
     return redirect()->away(url($url));
 });
 
-//test change
+
+//here is a route for appointements
+Route::get('/appointments', [AppointmentController::class, 'index']);
+Route::get('/appointments/{id}', [AppointmentController::class, 'show']);
+//search route to get alwyer by category
+Route::get('/search', [SearchController::class, 'search'])->name('search');
