@@ -70,12 +70,14 @@
                 @enderror
 
                 @php
-                    // This uses the Laravel count function and this php script makes it so that if less than 12 specialties are selected, it will fill the remaining entries with 0 instead of NULL for the db because data integrity mate
+                    // ! Why 13? because this ensure everyone has a 0 for a no specialty search
+                    // This uses the Laravel count function and this php script makes it so that if less than 12 (13 technically) specialties are selected, it will fill the remaining entries with 0 instead of NULL for the db because data integrity mate
                     // Get the number of selected specialties
                     $selectedSpecialtiesCount = count($request->get('specialty'));
                     // count the number of non selected entries
-                    $remainingEntries = 12 - $selectedSpecialtiesCount;
-                    // Fill the remaining entries with 0
+                    $remainingEntries = 13 - $selectedSpecialtiesCount; // 13 because 12 is the max number of specialties and 13 is non selected for the search function
+                                                                        // -> resulting in everyone having at least one 0 in their specialty array
+                    // Fill the remaining entries with 0                -> including the 13th entry
                     for ($i = 1; $i <= $remainingEntries; $i++) {
                         $request->merge(['specialty' => ['0']]);
                     }

@@ -19,7 +19,7 @@ class LawyerFactory extends Factory
     {
         return [
             'company' => $this->faker->name(),
-            'specialty' => [2, 3, 15, 5, 6, 12, 18, 30, 7, 19, 1, 0],   // this gives 10 valid entries, the other and an empty one
+            'specialty' => [2, 3, 15, 5, 6, 12, 18, 30, 7, 19, 28, 1, 0],   // this gives 12 valid entries including the other and the 13 is an empty one
             'location' => $this->faker->location(),
             'languages' => "English, Spanish, Luxembourgish",   // a fixed string for languages also ' can be used
             'email' => $this->faker->email(),
