@@ -26,4 +26,5 @@
 <div class="mt-6 p-4">
     {{$lawyers->links()}}
 </div>
+<a href="{{ route('search') }}">Search Lawyers</a>
 @endsection
