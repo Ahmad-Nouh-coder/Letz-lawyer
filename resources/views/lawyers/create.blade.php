@@ -93,7 +93,7 @@
         {{-- Contact Email --}}
         <div class="mb-6">
             <label for="email" class="inline-block text-lg mb-2">Contact Email</label>
-            <input type="text" value="{{old('email')}}" class="border border-gray-200 rounded p-2 w-full" name="email" placeholder="Example: yourbusiness@email.com" />
+            <input type="text" value="{{old('email')}}" class="border border-gray-200 rounded p-2 w-full" name="email" placeholder="Example: yourbusiness@email.lu" />
             @error('email')
             <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
             @enderror
