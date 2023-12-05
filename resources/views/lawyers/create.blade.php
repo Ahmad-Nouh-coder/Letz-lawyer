@@ -144,17 +144,6 @@
         </div>
 
 
-        {{--
-        <div class="mb-6">
-            <label for="tags" class="inline-block text-lg mb-2">
-                Tags (Comma Separated)
-            </label>
-            <input type="text" value="{{old('tags')}}" class="border border-gray-200 rounded p-2 w-full" name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" />
-        @error('tags')
-        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
-        @enderror
-        </div>
-        --}}
 
         {{-- Submit Button --}}
         <div class="mb-6">
