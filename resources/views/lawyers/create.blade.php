@@ -27,10 +27,8 @@
         {{-- Specialty --}}
         <div class="mb-6">
             <label for="specialty" class="inline-block text-lg mb-2">Select Specialties</label>
-
             <select class="border border-gray-200 rounded p-2 w-full" name="specialty" multiple size="12">
                 <option value="" selected disabled hidden>Select up to 12 specialties</option>
-                <option value="1">Corporate Lawyer</option>
                 <option value="2">Family Law</option>
                 <option value="3">Criminal Law</option>
                 <option value="4">Civil Law</option>
@@ -61,9 +59,10 @@
                 <option value="29">Construction Law</option>
                 <option value="30">Transportation Law</option>
                 <option value="31">Agriculture Law</option>
-                {{-- 0 is other if someone messes with stuff as well as for stuff that isn't listed here --}}
-                <option value="0">Other</option>
-                {{-- not selected is an empty entry in the db --}}
+                <option value="32">Corporate Lawyer</option>
+                {{-- 1 is other if someone messes with stuff as well as for stuff that isn't listed here --}}
+                <option value="1">Other</option>
+                {{-- not selected is an empty entry or a 0 in the db --}}
             </select>
             @error('specialty')
             <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
